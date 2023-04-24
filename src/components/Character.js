@@ -1,13 +1,12 @@
 // Write your Character component here
-import React, { useState, useEffect } from 'react';
 
 function Character({characters}) {
-    console.log(characters);
+    console.log('characters/js',characters);
     return (
         <div className="characterList">
             <ul>
-            {characters.name.map((names) => {
-                return <li key={names}></li>
+            {characters.map((objects) => {
+                return <li key={objects.name}>{objects.name}</li>
             })}
             </ul>
         </div>
